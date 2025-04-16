@@ -618,7 +618,7 @@ body .scroll-container::-webkit-scrollbar {
 
 @media only screen and (max-width: 400px) {
   body {
-    padding: 0.4rem;
+    padding: 0.2rem 0.4rem;
   }
   body .grid {
     display: flex;
