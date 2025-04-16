@@ -16,23 +16,32 @@ body {
   color: hsl(0, 0%, 100%);
   background: hsl(0, 0%, 7%);
   font-size: 62.5%;
-  padding: 2rem;
+  padding: 1.8rem 4rem;
   font-family: "Poppins", sans-serif;
 }
+
 body .grid {
   display: grid;
   grid-template-columns: 18rem auto;
   gap: 1.2rem;
-  height: 85vh;
+  height: 80vh;
 }
+
 body .grid .sidebar {
   border: 1px solid #383838;
   border-radius: 1.5rem;
   background: #1e1e1f;
   box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  justify-items: center;
 }
-body .grid .sidebar .avatar {
+
+body .grid .sidebar .sidebar-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body .grid .sidebar .sidebar-content .avatar {
   background: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
   border: 2px solid #383838;
   border-radius: 2rem;
@@ -42,25 +51,30 @@ body .grid .sidebar .avatar {
   justify-items: center;
   text-align: center;
 }
-body .grid .sidebar .avatar .avt {
+
+body .grid .sidebar .sidebar-content .avatar .avt {
   width: 100%;
 }
-body .grid .sidebar .name {
+
+body .grid .sidebar .sidebar-content .name {
+  text-align: center;
   margin: 1rem;
   width: 100%;
   font-size: 1.5rem;
   font-weight: 600;
 }
-body .grid .sidebar .name::-moz-selection {
+
+body .grid .sidebar .sidebar-content .name::-moz-selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
-body .grid .sidebar .name::selection {
+
+body .grid .sidebar .sidebar-content .name::selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
-body .grid .sidebar .role {
-  margin-top: 4.3rem;
+
+body .grid .sidebar .sidebar-content .role {
   color: hsl(0, 0%, 84%);
   background: hsl(240, 1%, 17%);
   text-align: center;
@@ -70,26 +84,31 @@ body .grid .sidebar .role {
   padding: 0.4rem;
   width: 50%;
 }
-body .grid .sidebar .role::-moz-selection {
+
+body .grid .sidebar .sidebar-content .role::-moz-selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
-body .grid .sidebar .role::selection {
+
+body .grid .sidebar .sidebar-content .role::selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
-body .grid .sidebar .gray-separator {
+
+body .grid .sidebar .sidebar-content .gray-separator {
   margin-top: 1.5rem;
   border: 0.01rem solid #383838;
   width: 80%;
 }
-body .grid .sidebar .nav-list {
+
+body .grid .sidebar .sidebar-content .nav-list {
   list-style-type: none;
   padding: 1rem;
   display: flex;
   flex-direction: column;
 }
-body .grid .sidebar .nav-list .list-item a {
+
+body .grid .sidebar .sidebar-content .nav-list .list-item a {
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -102,24 +121,29 @@ body .grid .sidebar .nav-list .list-item a {
   width: 8.5rem;
   box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
 }
-body .grid .sidebar .nav-list .list-item a::-moz-selection {
+
+body .grid .sidebar .sidebar-content .nav-list .list-item a::-moz-selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
   border: 0.1rem solid hsl(45, 100%, 72%);
 }
-body .grid .sidebar .nav-list .list-item a::selection {
+
+body .grid .sidebar .sidebar-content .nav-list .list-item a::selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
   border: 0.1rem solid hsl(45, 100%, 72%);
 }
-body .grid .sidebar .nav-list .list-item a:hover {
+
+body .grid .sidebar .sidebar-content .nav-list .list-item a:hover {
   background: hsl(240, 1%, 17%);
   color: hsl(45, 100%, 72%);
 }
-body .grid .sidebar .nav-list .list-item a:focus {
+
+body .grid .sidebar .sidebar-content .nav-list .list-item a:focus {
   background: hsl(240, 1%, 17%);
   color: hsl(45, 100%, 72%);
 }
+
 body .grid .scroll-container {
   border: 0.05rem solid #383838;
   border-radius: 1.5rem;
@@ -127,41 +151,50 @@ body .grid .scroll-container {
   box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   overflow: scroll;
 }
+
 body .grid .scroll-container .about {
   padding: 2.7rem 5rem;
 }
+
 body .grid .scroll-container .about .title {
   font-size: 2rem;
   font-weight: 600;
 }
+
 body .grid .scroll-container .about .title::-moz-selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
+
 body .grid .scroll-container .about .title::selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
+
 body .grid .scroll-container .about .separator {
   border: 0.15rem solid hsl(45, 100%, 72%);
   border-radius: 1rem;
   width: 2.5rem;
   margin: 1rem 0rem;
 }
+
 body .grid .scroll-container .about .intro {
   color: white;
   font-size: 1.5rem;
   font-weight: 400;
   margin: 2rem 0rem 1rem 0rem;
 }
+
 body .grid .scroll-container .about .intro::-moz-selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
+
 body .grid .scroll-container .about .intro::selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
+
 body .grid .scroll-container .about .about-content {
   display: inline-block;
   color: hsl(0, 0%, 84%);
@@ -169,36 +202,44 @@ body .grid .scroll-container .about .about-content {
   width: 80%;
   margin: 0rem 0rem 1rem 0rem;
 }
+
 body .grid .scroll-container .about .about-content .mobile {
   display: none;
 }
+
 body .grid .scroll-container .about .about-content ::-moz-selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
+
 body .grid .scroll-container .about .about-content ::selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
+
 body .grid .scroll-container .about .what-doing .what-do-title {
   margin: 1rem 0rem;
   font-size: 2rem;
   font-weight: 600;
 }
+
 body .grid .scroll-container .about .what-doing .what-do-title::-moz-selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
+
 body .grid .scroll-container .about .what-doing .what-do-title::selection {
   background: hsl(45, 100%, 72%);
   color: hsl(0, 0%, 7%);
 }
+
 body .grid .scroll-container .about .what-doing .box-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 1rem 0rem;
 }
+
 body .grid .scroll-container .about .what-doing .box-grid .box {
   border: 1px solid #383838;
   box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
@@ -209,23 +250,28 @@ body .grid .scroll-container .about .what-doing .box-grid .box {
   justify-content: center;
   align-items: center;
 }
+
 body .grid .scroll-container .about .what-doing .box-grid .box .service-icon img {
   width: 40px;
 }
+
 body .grid .scroll-container .about .what-doing .box-grid .box .service-content-box {
   width: 80%;
   display: flex;
   flex-direction: column;
 }
+
 body .grid .scroll-container .about .what-doing .box-grid .box .service-content-box .service-item-title {
   font-size: 1.2rem;
   margin: 0.2rem 2rem;
 }
+
 body .grid .scroll-container .about .what-doing .box-grid .box .service-content-box .service-item-text {
   font-size: 0.9rem;
   color: hsl(0, 0%, 84%);
   margin: 0.8rem 2rem;
 }
+
 body .grid .scroll-container .about .what-doing .box-grid .boxx {
   border: 1px solid #383838;
   box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
@@ -236,44 +282,54 @@ body .grid .scroll-container .about .what-doing .box-grid .boxx {
   justify-content: center;
   align-items: center;
 }
+
 body .grid .scroll-container .about .what-doing .box-grid .boxx .service-icon img {
   width: 40px;
 }
+
 body .grid .scroll-container .about .what-doing .box-grid .boxx .service-content-box {
   width: 80%;
   justify-content: center;
   align-items: center;
 }
+
 body .grid .scroll-container .about .what-doing .box-grid .boxx .service-content-box .service-item-title {
   font-size: 1.2rem;
   margin: 0rem 2rem;
 }
+
 body .grid .scroll-container .about .what-doing .box-grid .boxx .service-content-box .service-item-text {
   font-size: 0.9rem;
   color: hsl(0, 0%, 84%);
   margin: 0.8rem 2rem;
 }
+
 body .grid .scroll-container .resume {
   padding: 2.7rem 5rem 0rem 5rem;
 }
+
 body .grid .scroll-container .resume .title {
   font-size: 2rem;
   font-weight: 600;
 }
+
 body .grid .scroll-container .resume .separator {
   border: 0.15rem solid hsl(45, 100%, 72%);
   border-radius: 1rem;
   width: 2.5rem;
   margin: 1rem 0rem;
 }
+
 body .grid .scroll-container .resume .resume-content {
   margin: 2rem 0rem;
 }
+
 body .grid .scroll-container .resume .resume-content .title-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 body .grid .scroll-container .resume .resume-content .title-wrapper .icon-box {
   border: 1px solid #383838;
   background: hsl(240, 1%, 17%);
@@ -286,6 +342,7 @@ body .grid .scroll-container .resume .resume-content .title-wrapper .icon-box {
   z-index: 10;
   box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
 }
+
 body .grid .scroll-container .resume .resume-content .title-wrapper .icon-box .icon {
   border-radius: 0.1rem;
   width: 30%;
@@ -293,14 +350,17 @@ body .grid .scroll-container .resume .resume-content .title-wrapper .icon-box .i
   background: hsl(45, 100%, 72%);
   box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
 }
+
 body .grid .scroll-container .resume .resume-content .title-wrapper .education-tittle {
   margin: 0rem 2rem;
   font-size: 1.8rem;
 }
+
 body .grid .scroll-container .resume .resume-content .education {
   display: flex;
   flex-direction: row;
 }
+
 body .grid .scroll-container .resume .resume-content .education .timeline {
   display: inline-block;
   border: 1px solid #383838;
@@ -309,14 +369,17 @@ body .grid .scroll-container .resume .resume-content .education .timeline {
   z-index: 0;
   margin: -1rem 0rem 0rem 0.9rem;
 }
+
 body .grid .scroll-container .resume .resume-content .education .education-list {
   display: inline-block;
   list-style: none;
 }
+
 body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item {
   margin: 1rem 0.9rem;
   width: 80%;
 }
+
 body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .item-icon-box {
   border: 2px solid #383838;
   background: #383838;
@@ -332,39 +395,46 @@ body .grid .scroll-container .resume .resume-content .education .education-list 
   z-index: 10;
   box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
 }
+
 body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .item-icon-box .item-icon {
   background: hsl(45, 100%, 72%);
   border-radius: inherit;
   width: 50%;
   height: 50%;
 }
+
 body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .board-tittle {
   color: white;
   font-size: 1.2rem;
   font-weight: 600;
 }
+
 body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .branch {
   color: hsl(45, 100%, 72%);
   font-size: 0.9rem;
 }
+
 body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .year {
   color: hsl(45, 100%, 72%);
   font-size: 0.9rem;
 }
+
 body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .education-detail {
   color: hsl(0, 0%, 84%);
   font-weight: 300;
   font-size: 1rem;
 }
+
 body .grid .scroll-container .resume .resume-content .skills {
   margin: 3rem 0rem;
 }
+
 body .grid .scroll-container .resume .resume-content .skills .tittle {
   color: white;
   font-size: 2rem;
   font-weight: 600;
-  margin: 0rem 1rem;
 }
+
 body .grid .scroll-container .resume .resume-content .skills .skill-container {
   border: 1px solid #383838;
   border-radius: 2rem;
@@ -376,11 +446,13 @@ body .grid .scroll-container .resume .resume-content .skills .skill-container {
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
 }
+
 body .grid .scroll-container .resume .resume-content .skills .skill-container .lang .lang-title {
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
 }
+
 body .grid .scroll-container .resume .resume-content .skills .skill-container .lang .lang-item-box {
   margin: 1rem 0rem;
   width: 90%;
@@ -388,6 +460,7 @@ body .grid .scroll-container .resume .resume-content .skills .skill-container .l
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem 0rem;
 }
+
 body .grid .scroll-container .resume .resume-content .skills .skill-container .lang .lang-item-box .lang-item {
   background: hsl(0, 0%, 100%);
   border-radius: 0.5rem;
@@ -397,15 +470,18 @@ body .grid .scroll-container .resume .resume-content .skills .skill-container .l
   justify-content: center;
   align-items: center;
 }
+
 body .grid .scroll-container .resume .resume-content .skills .skill-container .lang .lang-item-box .lang-item img {
   width: 75%;
   height: auto;
 }
+
 body .grid .scroll-container .resume .resume-content .skills .skill-container .tool .tool-title {
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
 }
+
 body .grid .scroll-container .resume .resume-content .skills .skill-container .tool .tool-item-box {
   margin: 1rem 0rem;
   width: 70%;
@@ -413,6 +489,7 @@ body .grid .scroll-container .resume .resume-content .skills .skill-container .t
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem 0rem;
 }
+
 body .grid .scroll-container .resume .resume-content .skills .skill-container .tool .tool-item-box .tool-item {
   background: hsl(0, 0%, 100%);
   border-radius: 0.5rem;
@@ -422,47 +499,58 @@ body .grid .scroll-container .resume .resume-content .skills .skill-container .t
   justify-content: center;
   align-items: center;
 }
+
 body .grid .scroll-container .resume .resume-content .skills .skill-container .tool .tool-item-box .tool-item img {
   width: 75%;
   height: auto;
 }
+
 body .grid .scroll-container .projects {
   padding: 2.7rem 5rem 1rem 5rem;
 }
+
 body .grid .scroll-container .projects .title {
   font-size: 2rem;
   font-weight: 600;
 }
+
 body .grid .scroll-container .projects .separator {
   border: 0.15rem solid hsl(45, 100%, 72%);
   border-radius: 1rem;
   width: 2.5rem;
   margin: 1rem 0rem;
 }
+
 body .grid .scroll-container .projects .filter {
   margin: 2rem -3.5rem;
 }
+
 body .grid .scroll-container .projects .filter .filter-list {
   display: flex;
   font-size: 0.9rem;
   list-style: none;
 }
+
 body .grid .scroll-container .projects .filter .filter-list .filter-list-item a {
   margin: 0rem 1rem;
   text-decoration: none;
   color: hsla(0, 0%, 84%, 0.7);
 }
+
 body .grid .scroll-container .projects .filter .filter-list .filter-list-item a:hover {
   color: hsl(45, 100%, 72%);
 }
+
 body .grid .scroll-container .projects .filter .filter-list .filter-list-item a:focus {
   color: hsl(45, 100%, 72%);
 }
+
 body .grid .scroll-container .projects .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
+
 body .grid .scroll-container .projects .project-grid .project-item img {
   width: 100%;
   height: auto;
@@ -470,22 +558,27 @@ body .grid .scroll-container .projects .project-grid .project-item img {
   border: 2px solid #383838;
   opacity: 70%;
 }
+
 body .grid .scroll-container .projects .project-grid .project-item img:hover {
   transform: scale(102%);
 }
+
 body .grid .scroll-container .contact {
   padding: 2.7rem 5rem 1rem 5rem;
 }
+
 body .grid .scroll-container .contact .title {
   font-size: 2rem;
   font-weight: 600;
 }
+
 body .grid .scroll-container .contact .separator {
   border: 0.15rem solid hsl(45, 100%, 72%);
   border-radius: 1rem;
   width: 2.5rem;
   margin: 1rem 0rem;
 }
+
 body .grid .scroll-container .contact .other-contacts {
   margin: 1rem 0rem;
   width: 95%;
@@ -494,11 +587,13 @@ body .grid .scroll-container .contact .other-contacts {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
+
 body .grid .scroll-container .contact .other-contacts .contact-item {
   margin: 1rem 0rem;
   display: flex;
   flex-direction: row;
 }
+
 body .grid .scroll-container .contact .other-contacts .contact-item .icon-box {
   border: 1px solid #383838;
   background: hsl(240, 1%, 17%);
@@ -511,26 +606,31 @@ body .grid .scroll-container .contact .other-contacts .contact-item .icon-box {
   justify-content: center;
   align-items: center;
 }
+
 body .grid .scroll-container .contact .other-contacts .contact-item .icon-box img {
   width: 50%;
   height: auto;
 }
+
 body .grid .scroll-container .contact .other-contacts .contact-item .other-contact-title {
   margin: 0.5rem 1rem;
   color: hsla(0, 0%, 84%, 0.7);
   font-size: 0.7rem;
 }
+
 body .grid .scroll-container .contact .other-contacts .contact-item .other-contact-title a {
   text-decoration: none;
   color: white;
   font-size: 0.9rem;
 }
+
 body .grid .scroll-container .contact .contact-form .inputs .form-input {
   margin: 0rem 0rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
+
 body .grid .scroll-container .contact .contact-form .inputs .form-input .input-field {
   color: hsl(0, 0%, 98%);
   font-size: 14px;
@@ -541,20 +641,25 @@ body .grid .scroll-container .contact .contact-form .inputs .form-input .input-f
   border-radius: 1rem;
   box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
 }
+
 body .grid .scroll-container .contact .contact-form .inputs .form-input .input-field::-moz-placeholder {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
+
 body .grid .scroll-container .contact .contact-form .inputs .form-input .input-field::placeholder {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
+
 body .grid .scroll-container .contact .contact-form .inputs .form-input .input-field:focus {
   border: 1px solid hsl(45, 100%, 72%);
 }
+
 body .grid .scroll-container .contact .contact-form .inputs .form-input .input-field:focus:invalid {
   border: 1px solid hsl(0, 43%, 51%);
 }
+
 body .grid .scroll-container .contact .contact-form .inputs .form-message {
   box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   color: hsl(0, 0%, 98%);
@@ -566,17 +671,21 @@ body .grid .scroll-container .contact .contact-form .inputs .form-message {
   width: 94%;
   height: 25vh;
 }
+
 body .grid .scroll-container .contact .contact-form .inputs .form-message::-moz-placeholder {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
+
 body .grid .scroll-container .contact .contact-form .inputs .form-message::placeholder {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
+
 body .grid .scroll-container .contact .contact-form .inputs .form-message::-webkit-resizer {
   display: none;
 }
+
 body .grid .scroll-container .contact .form-btn {
   margin: 2rem 0rem;
   background: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
@@ -587,74 +696,146 @@ body .grid .scroll-container .contact .form-btn {
   border-radius: 1rem;
   box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
 }
+
 body .grid .scroll-container .contact .form-btn:hover {
   background: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
 }
+
 body .grid .scroll-container .contact .form-btn ion-icon {
   font-size: 16px;
 }
+
 body .grid .scroll-container .contact .form-btn:hover::before {
   background: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
 }
+
 body .grid .scroll-container .contact .form-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
+
 body .grid .scroll-container .contact .form-btn:disabled:hover {
   background: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
 }
+
 body .grid .scroll-container .contact .form-btn:disabled:hover::before {
   background: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
 }
+
 body .grid .scroll-container .footer {
   text-align: center;
   color: hsla(0, 0%, 84%, 0.7);
   margin: 1.2rem;
   font-size: 0.8rem;
 }
+
 body .scroll-container::-webkit-scrollbar {
   display: none;
 }
 
 @media only screen and (max-width: 400px) {
   body {
-    padding: 0rem 0.4rem;
+    padding: 0rem;
   }
+
   body .grid {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
   }
+
   body .grid .sidebar {
     height: 150vh;
   }
-  body .grid .sidebar .avatar {
+
+  body .grid .sidebar .sidebar-content {
+    all: unset;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: row;
+  }
+
+  body .grid .sidebar .sidebar-content .avatar {
+    background: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+    border: 2px solid #383838;
+    border-radius: 1.3rem;
+    margin: 1rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  body .grid .sidebar .sidebar-content .avatar .avt {
+    width: 100%;
+    height: auto;
+  }
+
+  body .grid .sidebar .sidebar-content .name {
+    width: 35%;
+    margin: 1rem 0rem;
+    padding: 1rem 0rem;
+    font-size: 1.34rem;
+    font-weight: 600;
+  }
+
+  body .grid .sidebar .sidebar-content .name::-moz-selection {
+    background: hsl(45, 100%, 72%);
+    color: hsl(0, 0%, 7%);
+  }
+
+  body .grid .sidebar .sidebar-content .name::selection {
+    background: hsl(45, 100%, 72%);
+    color: hsl(0, 0%, 7%);
+  }
+
+  body .grid .sidebar .sidebar-content .role {
+    all: unset;
+    height: 10%;
+    font-size: 0.5rem;
+    margin: 4.2rem 0rem 0rem -8.1rem;
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.7rem;
+    border: 1px solid #383838;
+    background: #383838;
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    display: inline-block;
+  }
+
+  body .grid .sidebar .sidebar-content .role::-moz-selection {
+    background: hsl(45, 100%, 72%);
+    color: hsl(0, 0%, 7%);
+  }
+
+  body .grid .sidebar .sidebar-content .role::selection {
+    background: hsl(45, 100%, 72%);
+    color: hsl(0, 0%, 7%);
+  }
+
+  body .grid .sidebar .sidebar-content .gray-separator {
+    display: none;
+    margin-top: 1.5rem;
+    border: 0.01rem solid #383838;
+    width: 80%;
+  }
+
+  body .grid .sidebar .sidebar-content .nav-list {
     display: none;
   }
-  body .grid .sidebar .name {
-    display: none;
-  }
-  body .grid .sidebar .role {
-    display: none;
-  }
-  body .grid .sidebar .gray-separator {
-    display: none;
-  }
-  body .grid .sidebar .nav-list {
-    display: none;
-  }
+
   body .grid .scroll-container .about {
     padding: 2rem;
   }
+
   body .grid .scroll-container .about .title {
     font-size: 2rem;
   }
+
   body .grid .scroll-container .about .intro {
     color: white;
     font-size: 1.5rem;
     font-weight: 400;
     margin: 2rem 0rem 1rem 0rem;
   }
+
   body .grid .scroll-container .about .about-content {
     width: 100%;
     display: inline-block;
@@ -662,88 +843,108 @@ body .scroll-container::-webkit-scrollbar {
     font-size: 0.85rem;
     text-align: justify;
   }
+
   body .grid .scroll-container .about .about-content .desktop {
     display: none;
   }
+
   body .grid .scroll-container .about .about-content .mobile {
     all: unset;
   }
+
   body .grid .scroll-container .about .what-doing .what-do-title {
     margin: 1rem 0rem 0rem 0rem;
     font-size: 1.8rem;
     font-weight: 600;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid .box {
     width: 100%;
     height: 7rem;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid .box .service-icon img {
     width: 30px;
     margin: 1.5rem;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid .box .service-content-box {
     width: 70%;
     display: flex;
     flex-direction: column;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid .box .service-content-box .service-item-title {
     font-size: 1rem;
     margin: 0rem 0.5rem;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid .box .service-content-box .service-item-text {
     font-size: 0.7rem;
     color: hsl(0, 0%, 84%);
     margin: 0rem 0.5rem;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid .boxx {
     width: 100%;
     height: 7rem;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid .boxx .service-icon img {
     margin: 1.5rem;
     width: 30px;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid .boxx .service-content-box {
     margin-top: -1rem;
     width: 65%;
     justify-content: center;
     align-items: center;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid .boxx .service-content-box .service-item-title {
     font-size: 1rem;
     margin: 0rem 0.5rem;
   }
+
   body .grid .scroll-container .about .what-doing .box-grid .boxx .service-content-box .service-item-text {
     font-size: 0.7rem;
     color: hsl(0, 0%, 84%);
     margin: 0rem 0.5rem;
   }
+
   body .grid .scroll-container .resume {
     padding: 2rem 2rem 0rem 2rem;
   }
+
   body .grid .scroll-container .resume .title {
     font-size: 2rem;
     font-weight: 600;
   }
+
   body .grid .scroll-container .resume .separator {
     border: 0.15rem solid hsl(45, 100%, 72%);
     border-radius: 1rem;
     width: 2.5rem;
     margin: 1rem 0rem;
   }
+
   body .grid .scroll-container .resume .resume-content {
     margin: 2rem 0rem 0rem 0rem;
   }
+
   body .grid .scroll-container .resume .resume-content .title-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
+
   body .grid .scroll-container .resume .resume-content .title-wrapper .icon-box {
     border: 1px solid #383838;
     background: hsl(240, 1%, 17%);
@@ -756,6 +957,7 @@ body .scroll-container::-webkit-scrollbar {
     z-index: 10;
     box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   }
+
   body .grid .scroll-container .resume .resume-content .title-wrapper .icon-box .icon {
     border-radius: 0.1rem;
     width: 30%;
@@ -763,31 +965,37 @@ body .scroll-container::-webkit-scrollbar {
     background: hsl(45, 100%, 72%);
     box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
   }
+
   body .grid .scroll-container .resume .resume-content .title-wrapper .education-tittle {
     margin: 0rem 2rem;
     font-size: 1.5rem;
   }
+
   body .grid .scroll-container .resume .resume-content .education {
     height: 23rem;
     display: flex;
     flex-direction: row;
   }
+
   body .grid .scroll-container .resume .resume-content .education .timeline {
     display: inline-block;
     border: 1px solid #383838;
     width: 0rem;
-    height: 76%;
+    height: 78%;
     z-index: 0;
     margin: -1rem 0rem 0rem 0.9rem;
   }
+
   body .grid .scroll-container .resume .resume-content .education .education-list {
     display: inline-block;
     list-style: none;
   }
+
   body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item {
     margin: 0rem 0rem;
     width: 100%;
   }
+
   body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .item-icon-box {
     border: 2px solid #383838;
     background: #383838;
@@ -801,39 +1009,47 @@ body .scroll-container::-webkit-scrollbar {
     position: relative;
     left: -3rem;
   }
+
   body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .item-icon-box .item-icon {
     background: hsl(45, 100%, 72%);
     border-radius: inherit;
     width: 50%;
     height: 50%;
   }
+
   body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .board-tittle {
     color: white;
     font-size: 0.8rem;
     font-weight: 600;
   }
+
   body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .branch {
     color: hsl(45, 100%, 72%);
     font-size: 0.6rem;
   }
+
   body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .year {
     color: hsl(45, 100%, 72%);
     font-size: 0.7rem;
   }
+
   body .grid .scroll-container .resume .resume-content .education .education-list .edcation-list-item .education-detail {
     color: hsl(0, 0%, 84%);
     font-weight: 300;
     font-size: 0.7rem;
   }
+
   body .grid .scroll-container .resume .resume-content .skills {
     margin: 2rem 0rem 0rem 0rem;
   }
+
   body .grid .scroll-container .resume .resume-content .skills .tittle {
     color: white;
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0rem 1rem;
   }
+
   body .grid .scroll-container .resume .resume-content .skills .skill-container {
     border: 1px solid #383838;
     border-radius: 2rem;
@@ -844,11 +1060,13 @@ body .scroll-container::-webkit-scrollbar {
     flex-direction: column;
     gap: 2rem;
   }
+
   body .grid .scroll-container .resume .resume-content .skills .skill-container .lang .lang-title {
     color: white;
     font-size: 1.3rem;
     font-weight: 600;
   }
+
   body .grid .scroll-container .resume .resume-content .skills .skill-container .lang .lang-item-box {
     margin: 1rem 0rem;
     width: 100%;
@@ -856,6 +1074,7 @@ body .scroll-container::-webkit-scrollbar {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem 0rem;
   }
+
   body .grid .scroll-container .resume .resume-content .skills .skill-container .lang .lang-item-box .lang-item {
     background: hsl(0, 0%, 100%);
     border-radius: 0.5rem;
@@ -865,16 +1084,19 @@ body .scroll-container::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
   }
+
   body .grid .scroll-container .resume .resume-content .skills .skill-container .lang .lang-item-box .lang-item img {
     width: 75%;
     height: auto;
   }
+
   body .grid .scroll-container .resume .resume-content .skills .skill-container .tool .tool-title {
     color: white;
     font-size: 1.3rem;
     font-weight: 600;
     font-weight: 600;
   }
+
   body .grid .scroll-container .resume .resume-content .skills .skill-container .tool .tool-item-box {
     margin: 1rem 0rem;
     width: 70%;
@@ -882,6 +1104,7 @@ body .scroll-container::-webkit-scrollbar {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem 0rem;
   }
+
   body .grid .scroll-container .resume .resume-content .skills .skill-container .tool .tool-item-box .tool-item {
     margin: 0rem 1.5rem 0rem 0rem;
     background: hsl(0, 0%, 100%);
@@ -892,44 +1115,54 @@ body .scroll-container::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
   }
+
   body .grid .scroll-container .resume .resume-content .skills .skill-container .tool .tool-item-box .tool-item img {
     width: 75%;
     height: auto;
   }
+
   body .grid .scroll-container .projects {
     padding: 2rem;
   }
+
   body .grid .scroll-container .projects .title {
     font-size: 2rem;
     font-weight: 600;
   }
+
   body .grid .scroll-container .projects .separator {
     border-radius: 1rem;
     width: 2.5rem;
     margin: 1rem 0rem;
   }
+
   body .grid .scroll-container .projects .filter {
     width: 125%;
     margin: 2rem -3rem;
   }
+
   body .grid .scroll-container .projects .filter .filter-list {
     display: flex;
     font-size: 0.6rem;
     list-style: none;
   }
+
   body .grid .scroll-container .projects .filter .filter-list .filter-list-item a {
     margin: 0rem 0.5rem;
     text-decoration: none;
     color: hsla(0, 0%, 84%, 0.7);
   }
+
   body .grid .scroll-container .projects .filter .filter-list .filter-list-item a:hover {
     color: hsl(45, 100%, 72%);
   }
+
   body .grid .scroll-container .projects .project-grid {
     display: grid;
     grid-template-columns: repeat(2, fr);
     gap: 0.5rem;
   }
+
   body .grid .scroll-container .projects .project-grid .project-item img {
     width: 90%;
     height: auto;
@@ -937,34 +1170,41 @@ body .scroll-container::-webkit-scrollbar {
     border: 2px solid #383838;
     opacity: 70%;
   }
+
   body .grid .scroll-container .projects .project-grid .project-item img:hover {
     transform: scale(100%);
   }
+
   body .grid .scroll-container .contact {
     padding: 2rem;
   }
+
   body .grid .scroll-container .contact .title {
     font-size: 1.8rem;
     font-weight: 600;
   }
+
   body .grid .scroll-container .contact .separator {
     border: 0.15rem solid hsl(45, 100%, 72%);
     border-radius: 1rem;
     width: 2.5rem;
     margin: 1rem 0rem;
   }
+
   body .grid .scroll-container .contact .other-contacts {
     margin: 2rem 0rem;
     color: white;
     display: flex;
     flex-direction: column;
   }
+
   body .grid .scroll-container .contact .other-contacts .contact-item {
     width: 100%;
     margin: 1rem 0rem;
     display: flex;
     flex-direction: row;
   }
+
   body .grid .scroll-container .contact .other-contacts .contact-item .icon-box {
     border: 1px solid #383838;
     background: hsl(240, 1%, 17%);
@@ -977,20 +1217,24 @@ body .scroll-container::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
   }
+
   body .grid .scroll-container .contact .other-contacts .contact-item .icon-box img {
     width: 50%;
     height: auto;
   }
+
   body .grid .scroll-container .contact .other-contacts .contact-item .other-contact-title {
     margin: 0.1rem 1rem;
     color: hsla(0, 0%, 84%, 0.7);
     font-size: 0.6rem;
   }
+
   body .grid .scroll-container .contact .other-contacts .contact-item .other-contact-title a {
     text-decoration: none;
     color: white;
     font-size: 0.8rem;
   }
+
   body .grid .scroll-container .contact .contact-form .inputs .form-input {
     margin: 0rem 0rem;
     display: flex;
@@ -998,6 +1242,7 @@ body .scroll-container::-webkit-scrollbar {
     gap: 2rem;
     width: 100%;
   }
+
   body .grid .scroll-container .contact .contact-form .inputs .form-input .input-field {
     color: hsl(0, 0%, 98%);
     font-size: 14px;
@@ -1008,20 +1253,25 @@ body .scroll-container::-webkit-scrollbar {
     border-radius: 1rem;
     box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   }
+
   body .grid .scroll-container .contact .contact-form .inputs .form-input .input-field::-moz-placeholder {
     font-weight: 500;
     font-family: "Poppins", sans-serif;
   }
+
   body .grid .scroll-container .contact .contact-form .inputs .form-input .input-field::placeholder {
     font-weight: 500;
     font-family: "Poppins", sans-serif;
   }
+
   body .grid .scroll-container .contact .contact-form .inputs .form-input .input-field:focus {
     border: 1px solid hsl(45, 100%, 72%);
   }
+
   body .grid .scroll-container .contact .contact-form .inputs .form-input .input-field:focus:invalid {
     border: 1px solid hsl(0, 43%, 51%);
   }
+
   body .grid .scroll-container .contact .contact-form .inputs .form-message {
     box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
     color: hsl(0, 0%, 98%);
@@ -1034,17 +1284,21 @@ body .scroll-container::-webkit-scrollbar {
     width: 89%;
     height: 25vh;
   }
+
   body .grid .scroll-container .contact .contact-form .inputs .form-message::-moz-placeholder {
     font-weight: 500;
     font-family: "Poppins", sans-serif;
   }
+
   body .grid .scroll-container .contact .contact-form .inputs .form-message::placeholder {
     font-weight: 500;
     font-family: "Poppins", sans-serif;
   }
+
   body .grid .scroll-container .contact .contact-form .inputs .form-message::-webkit-resizer {
     display: none;
   }
+
   body .grid .scroll-container .contact .form-btn {
     margin: 2rem 0rem 0rem 0rem;
     background: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
@@ -1059,27 +1313,36 @@ body .scroll-container::-webkit-scrollbar {
     align-items: center;
     gap: 0.3rem;
   }
+
   body .grid .scroll-container .contact .form-btn:hover {
     background: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
   }
+
   body .grid .scroll-container .contact .form-btn ion-icon {
     font-size: 16px;
   }
+
   body .grid .scroll-container .contact .form-btn:hover::before {
     background: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
   }
+
   body .grid .scroll-container .contact .form-btn:disabled {
     opacity: 0.7;
     cursor: not-allowed;
   }
+
   body .grid .scroll-container .contact .form-btn:disabled:hover {
     background: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
   }
+
   body .grid .scroll-container .contact .form-btn:disabled:hover::before {
     background: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
   }
+
   body .grid .scroll-container .footer {
     margin: 0.5rem;
     font-size: 0.6rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
